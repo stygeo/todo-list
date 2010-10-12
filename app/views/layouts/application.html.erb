@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TodoList</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+	<div class="main-wrapper">
+		<div class="header">
+			<h1>My TODO's</h1>
+		</div>
+		
+		<div class="todo-items">
+			<% (1..10).each do %>
+				<div class="content">
+					<div class="todo-item">
+						<div class="checker">
+							<%= check_box_tag :test %>
+						</div>
+				
+						<div class="content">
+							Hi
+						</div>
+					</div>
+				<% end %>
+			</div>
+			
+			<%= yield %>
+		</div>
+	</div>
+</body>
+</html>
